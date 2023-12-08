@@ -5,6 +5,12 @@ import Stack from 'react-bootstrap/Stack';
 import Badge from 'react-bootstrap/Badge';
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function App() {
 
@@ -63,8 +69,6 @@ function App() {
         
       </Alert>
       {!show && <Button onClick={() => setShow(true)}>Show Alert</Button>}
-
-     
       <style type="text/css">
         {`
     .btn-flat {
@@ -87,6 +91,71 @@ function App() {
         Flat Button 2
       </Button>
     </div>
+
+    <Stack direction="horizontal" gap={3}>
+      <DropdownButton
+        id="dropdown-button-dark-example2"
+        variant="secondary"
+        title="Light dropdown"
+        className="mt-2"
+        data-bs-theme="light"
+      >
+        <Dropdown.Item href="#/action-1" active={true}>
+          Action
+        </Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
+      </DropdownButton>
+
+      <DropdownButton
+        id="dropdown-button-dark-example2"
+        variant="secondary"
+        title="Dark dropdown"
+        className="mt-2"
+        data-bs-theme="dark"
+      >
+        <Dropdown.Item href="#/action-1" active>
+          Action
+        </Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
+      </DropdownButton>
+<div>
+
+      <ThemeProvider
+  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+  minBreakpoint="lg"
+>
+  <div>Your app...</div>
+</ThemeProvider>
+</div>
+
+
+    </Stack>
+
+    <div>
+<Container >
+      <Row>
+        <Col>1 of 1</Col>
+        <Col>1 of 1</Col>
+        <Col></Col>
+      </Row>
+      <Row>
+        <Col>1 of 1</Col>
+        <Col></Col>
+        <Col></Col>
+      </Row>
+      <Row>
+        <Col>1 of 1</Col>
+        <Col>1 of 1</Col>
+        <Col>1 of 1</Col>
+      </Row>
+    </Container>
+</div>
 
     </div>
   );
