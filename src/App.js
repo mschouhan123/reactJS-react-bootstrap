@@ -11,7 +11,8 @@ import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import Column from './src/Column'
+import Slack from './src/Slack';
 function App() {
 
   const [show, setShow] = useState(true);
@@ -126,37 +127,21 @@ function App() {
       </DropdownButton>
 <div>
 
-      <ThemeProvider
+      {/* <ThemeProvider
   breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
   minBreakpoint="lg"
 >
   <div>Your app...</div>
-</ThemeProvider>
+</ThemeProvider> */}
 </div>
 
 
     </Stack>
 
     <div>
-<Container >
-      <Row>
-        <Col>1 of 1</Col>
-        <Col>1 of 1</Col>
-        <Col></Col>
-      </Row>
-      <Row>
-        <Col>1 of 1</Col>
-        <Col></Col>
-        <Col></Col>
-      </Row>
-      <Row>
-        <Col>1 of 1</Col>
-        <Col>1 of 1</Col>
-        <Col>1 of 1</Col>
-      </Row>
-    </Container>
 </div>
-
+    <Column />
+     <Slack />
     </div>
   );
 }
