@@ -13,6 +13,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Column from './src/Column'
 import Slack from './src/Slack';
+import NavBar from './src/NavBar';
 function App() {
 
   const [show, setShow] = useState(true);
@@ -142,6 +143,7 @@ function App() {
 </div>
     <Column />
      <Slack />
+     <NavBar />
     </div>
   );
 }
